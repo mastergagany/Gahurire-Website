@@ -2,10 +2,141 @@
 <html>
     <head>
         <title>Gahurire Website</title>
-        <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/90294c57c2.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="widith=device-width,initial-scale=1.0">
         <meta name="author" content="Aphrodis">
+
+    <style>
+        /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f4f6f9, #dbe9f4);
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0px;
+    width:  100%;
+    left: 0px;
+    background-color: #023047;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header img {
+    height: 50px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Form Container */
+#account {
+    max-width: 500px;
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#account p:first-child {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form label {
+    font-weight: 600;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #219ebc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #126782;
+}
+
+#Error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+  background-color: #002244;
+  color: white;
+  padding: 1rem;
+  left: 0px;
+  text-align: center;
+  margin-left:0px;
+  width: 100%;
+  
+}
+
+.footer img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #account {
+        margin: 20px 10px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+</style>
     </head>
     <body>
       
@@ -58,25 +189,7 @@
                    </div>
              </div>
 
-             <div class="footer">
-                <h3>Contact us</h3> <br>
-                <a href="https://www.google.com/search?q=gmail&rlz=1C1CHBF_enRW1135RW1135&oq=gma&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIMCAAQRRg5GLEDGIAEMgwIARAjGCcYgAQYigUyDAgCECMYJxiABBiKBTINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIGCAUQRRg9MgYIBhBFGD0yBggHEEUYQdIBCDQ3MzlqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8"> <u><span>Email</span></u>:info@gahurire.ac</a> <br>
-                <p> <span>Tel:</span>+250 794270356</p> <br>
-                             <h1> <u>Our social medias</u></h1> <br>
-                 <a href="https://www.intagram.com/"><img src="Images/instagram.jfif"></a>
-                 <a href="https://www.facebook.com/"><img src="Images/facebo.png"></a>
-                 <a href="https://www.youtube.com/"><img src="Images/youtu.PNG"></a>
-                 <a href="https://www.intagram.com/"><img src="Images/watsapp.png"></a>
-                 <a href="https://www.x.com/"><img src="Images/x.png"></a>
-
-                 <div id="centre">
-                    <p>@Copyright 2025</p>
-                 </div>
-
-                 <div id="left">
-                    <h1>Have an issue?</h1> &nbsp;&nbsp;&nbsp;&nbsp; <br>
-                    <a href="contact.html"><img src="Images/que.png"></a>
-                 </div>
+             
         </div>
         <div class="footer">
             <h3>Contact us</h3> <br>
@@ -99,31 +212,32 @@
              </div>
               
 
-       <script>
-
-        let password=document.myForm.password.value;
-        let password2=document.myForm.password2.value;
-        let error=document.getElementById("Error");
-        
-        let submit=document.getElementById("btn");
-
-        submit.onclick=function validate(){
-            if (password=="null"|| password==""){
-                document.getElementById("Error").innerHTML="Password can't be empty";
-                    return false;
+             <script>
+                function validate() {
+                    let password = document.getElementById("password").value;
+                    let repeatPassword = document.getElementById("repeatPassword").value;
+                    let error = document.getElementById("Error");
+            
+                    if (password === "") {
+                        error.innerHTML = "Password can't be empty";
+                        return false;
+                    }
+            
+                    if (password.length < 6) {
+                        error.innerHTML = "Password must be at least 6 characters long";
+                        return false;
+                    }
+            
+                    if (repeatPassword !== password) {
+                        error.innerHTML = "Passwords do not match";
+                        return false;
+                    }
+            
+                    error.innerHTML = "";
+                    return true; // Allow submission
                 }
-
-                else if(password2!==password){
-                    error.innerHTML="Password not match";
-                    return false;
-                }
-        }
-
-       
-
-       </script>
-
-
+            </script>
+            
 
     </body>
 </html>

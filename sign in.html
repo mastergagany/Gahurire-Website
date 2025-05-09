@@ -2,10 +2,101 @@
 <html>
     <head>
         <title>Gahurire Website</title>
-        <link rel="stylesheet" href="style.css">
+       
         <script src="https://kit.fontawesome.com/90294c57c2.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="widith=device-width,initial-scale=1.0">
         <meta name="author" content="Aphrodis">
+
+         <style>
+            body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+.header {
+  background-color: #002244;
+  padding: 1rem;
+  text-align: right;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.main {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+#account p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #004a99;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #003366;
+}
+
+.footer {
+  background-color: #002244;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  form input, form button {
+    font-size: 1rem;
+    width: 85%;
+  }
+}
+
+         </style>
+
+
     </head>
     <body>
       <div class="header">
@@ -55,25 +146,27 @@
                     <a href="contact.html"><img src="Images/que.png"></a>
                  </div>
         </div>
-        <div class="footer">
-            <h3>Contact us</h3> <br>
-            <a href="https://www.google.com/search?q=gmail&rlz=1C1CHBF_enRW1135RW1135&oq=gma&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIMCAAQRRg5GLEDGIAEMgwIARAjGCcYgAQYigUyDAgCECMYJxiABBiKBTINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIGCAUQRRg9MgYIBhBFGD0yBggHEEUYQdIBCDQ3MzlqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8"> <u><span>Email</span></u>:info@gahurire.ac</a> <br>
-            <p> <span>Tel:</span>+250 794270356</p> <br>
-                         <h1> <u>Our social medias</u></h1> <br>
-             <a href="https://www.intagram.com/"><img src="Images/instagram.jfif"></a>
-             <a href="https://www.facebook.com/"><img src="Images/facebo.png"></a>
-             <a href="https://www.youtube.com/"><img src="Images/youtu.PNG"></a>
-             <a href="https://www.intagram.com/"><img src="Images/watsapp.png"></a>
-             <a href="https://www.x.com/"><img src="Images/x.png"></a>
+        <script>
+         <script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-             <div id="centre">
-                <p>@Copyright 2025</p>
-             </div>
+    if (!email || !password) {
+      alert("Please fill in all fields.");
+      event.preventDefault();
+      return;
+    }
 
-             <div id="left">
-                <h1>Have an issue?</h1> &nbsp;&nbsp;&nbsp;&nbsp; <br>
-                <a href="contact.html"><img src="Images/que.png"></a>
-             </div>
+    // Optional: add regex or stricter password rules
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      event.preventDefault();
+    }
+  });
+</script>
+
+        </script>
                              
 
     </body>
