@@ -129,7 +129,7 @@ form button:hover {
     }
 
     #account {
-        margin: 20px 10px;
+        margin-top: 150px;
     }
 
     form button {
@@ -161,11 +161,11 @@ form button:hover {
             <div id="account">
                 <p>Sign Up</p>
         
-                <form onsubmit="validate()" name="myForm">
+                <form onsubmit="validate()" name="submit-to-google-sheet">
                     <label for="firstName">First Name:</label> <br>
-                    <input type="text" name="Names" id="name" placeholder="Enter Names" required> <br>
+                    <input type="text" name="First Name" id="name" placeholder="Enter First Name" required> <br>
                     <label for="lastName">Last Name:</label><br>
-                    <input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" required> <br>
+                    <input type="text" name="Last Name" id="lastName" placeholder="Enter your Last Name" required> <br>
                     <label for="school">Current school:</label> <br>
                     <input type="text" name="school" id="school" placeholder="Your Current School" required><br>
                     <label for="age">Date of Birth:</label> <br>
@@ -211,6 +211,32 @@ form button:hover {
                 <a href="contact.html"><img src="Images/que.png"></a>
              </div>
               
+
+
+
+
+
+             <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby3UUxNO2PD6zLkYDqX-IRRgJGu4kmtTlXOLTsbv2I71cTOnunZx2ZNOTB-MjdEALIh/exec'
+                const form = document.forms['submit-to-google-sheet']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response =>{
+                        console.log('Success!', response)
+                        form.reset();
+                    })
+                        
+
+
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
+
+
+
+
 
              <script>
                 function validate() {
