@@ -146,28 +146,18 @@ form button:hover {
                     <a href="contact.html"><img src="Images/que.png"></a>
                  </div>
         </div>
-        <script>
-         <script>
-  document.querySelector("form").addEventListener("submit", function(event) {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
+        
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZERR9RN5R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    if (!email || !password) {
-      alert("Please fill in all fields.");
-      event.preventDefault();
-      return;
-    }
-
-    // Optional: add regex or stricter password rules
-    if (password.length < 6) {
-      alert("Password must be at least 6 characters long.");
-      event.preventDefault();
-    }
-  });
+  gtag('config', 'G-EZERR9RN5R');
 </script>
 
-        </script>
-                             
+
 
     </body>
 </html>
