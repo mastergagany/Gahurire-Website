@@ -2,158 +2,326 @@
 <html>
     <head>
         <title>Gahurire Website</title>
-        <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/90294c57c2.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="widith=device-width,initial-scale=1.0">
         <meta name="author" content="Aphrodis">
+
+        <style>
+
+.header {
+    background-color: #003366;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 97%;
+    height: 20%;
+    overflow-x: scroll;
+}
+::-webkit-scroll-bar{
+    display: none;
+}
+
+.header .logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer h3, .footer h4 {
+    margin: 10px 0;
+}
+
+.footer .social-icons {
+    margin: 15px 0;
+}
+
+.footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    border-radius: 5px;
+}
+
+.help-link img {
+    width: 40px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header{
+        height: 20%;
+    }
+    .nav-links {
+        flex-direction: column;
+
+        
+    }
+    .testimonial-card {
+        margin: 20px 10px;
+    }
+
+    .testimonials {
+        padding: 20px 10px;
+    }
+}
+.header .logo {
+    max-width: 200px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    height: 150px;
+}
+
+
+.announcements {
+  padding: 2rem;
+  background-color: #f9f9fb;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.announcements h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.announcements h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3498db;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.announcements article {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #3498db;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.announcements article:hover {
+  transform: translateY(-4px);
+}
+
+.announcements h3 {
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.announcements p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.announcements a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.announcements a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .announcements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .announcements h2 {
+    grid-column: 1 / -1;
+  }
+
+  .announcements article {
+    margin-bottom: 0;
+  }
+}
+
+    </style>
+
+
+       
     </head>
     <body>
       
         <div class="main">
-
-            <div class="header">
-
-                <img src="Images/gah.PNG">
-                <ul>
-                    <li><a href="About.html"><i class="fa-solid fa-users-rectangle"></i>About</a> </li>
-                    <li><a href="Home.html"><i class="fa-solid fa-house"></i></i></a></li>
-                    <li><a href="">Announcements</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contacts</a></li>
-                    <li><a href="account.html"><i class="fa-solid fa-user"></i></a></li>
-                </ul>
-            </div> <br><br><br>
-                                                              
-                                                                
-
-                                                                    <div id="intro">
-                                                                    <h1><u>Welcome To Gs Gahurire Tss Website </u></h1><br><br>
-                                                                    <P> Gahurire is a school located in Ngoma District in East,Rwanda. <br><br>
-                                                                     Gahurire Has different Categories and courses .<br>Categories: <br>
-                                                                    
-                                                                        <ul>
-                                                                         <li>Nursery</li>
-                                                                         <li>Lower Primary</li>
-                                                                         <li>Upper Primary</li>
-                                                                         <li>Ordinary Secondary Level</li>
-                                                                         <li>Advanced Secondary Level</li>
-                                                                        </ul>
-                                                                    </div> <br><br>
-                                
-                                                                            <div class="intro-1">
-                                                                                <h1>How students are Working in the internship:</h1>
-                                                                            </div>
-                                                                       
-                                                             <div class="sod">
-                                                            <p>Software Development Updates</p> <br>
-                                                            <img src="Images/comp..jfif">
-                                                            <img src="Images/computer.jfif">
-                                                            <img src="Images/download.jfif">
-                                                            </div>
-                                
-                                                        <div class="lsv">
-                                                            <p>Land Survey Updates</p> <br>
-                                                            <img src="Images/comp..jfif">
-                                                            <img src="Images/computer.jfif">
-                                                            <img src="Images/download.jfif">
-                                                            
-                                                        </div>
-                                
-                                                        <div class="bdc">
-                                
-                                                            <p>Building Construction Updates</p> <br>
-                                                            <img src="Images/comp..jfif">
-                                                            <img src="Images/computer.jfif">
-                                                            <img src="Images/download.jfif">
-                                                        </div>
-                                                    
-                                                         
-                                                           <div class="announcements">
-                                                            
-                                                            <h2>Outstanding Exam Performance</h2> <br><br>
-                                                             <p>We are proud to announce that <strong>Gahurire TSS students achieved a 100% pass rate</strong> <br>
-                                                               in the recent national examinations.
-                                                            <br> This reflects our dedication to academic excellence and consistent hard work by both students and staff.</p> <br><br>
-                                                                  
-                                                                      
-                                                                   <h2>Wisely Guided Teaching</h2><br><br>
-                                                                  <p>At Gahurire TSS, <br>our experienced teachers use <strong>intelligent and student-centered approaches</strong> to deliver lessons. <br>
-                                                              They ensure every learner gets the support they need to succeed and think critically.</p> <br><br>
-                                                                         
-                                                                      
-                                                                          <h2>Now Hiring: School Market</h2> <br><br>
-                                                                            <p>Gahurire TSS is <strong>opening a new school market</strong> and currently accepting applications
-                                                                               for food and firewood <br>
-                                                                                  <a href="contact.html">Contact us</a>
-                                                                            </suppliers> This is a great opportunity for local vendors to work with our institution.</p> <br><br>
-                                                                          
-                                                                      
-                                                                            <h2>Enroll Your Child Today</h2> <br><br>
-                                                                          
-                                                                            <p>We warmly invite parents to bring their children to <strong>join the Gahurire TSS family</strong>
-                                                                              <br>With our proven track record, your child’s future is secure with us. Registration is ongoing!</p>
-                                                                     </div>
-                                                                              
-                                                           
+            <!-- Header -->
+            <header class="header">
+                <img src="Images/gah.PNG" alt="Gahurire Logo" class="logo">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="About.html"><i class="fa-solid fa-users-rectangle"></i> About</a></li>
+                        <li><a href="Home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="announcements.html">Announcements</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contacts</a></li>
+                        <li><a href="account.html"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
 
 
-                                <center>
-                                    <div class="testimonials">
-                                        <h2><u>What Our students and teachers Say?</u></h2>
-     
-                                        <div>
-                                            <h1>#Barindikije Aphrodis</h1>
-                                         <img src="Images/student1.jpg"> 
-                                            </h1>
-                                         
-                                          <br>
-                                         <p>My name is Aphrodis, and I'm a proud student of Gahurire Tss.
-                                              Today, I want to share with you why I believe my school isn’t just a place where we learn subjects 
-                                              <br>—it's a place where we grow, discover who we are, and build a future we’re excited about.
-     
-                                             At Hillcrest, <br>we’re more than just students—we’re a community. From the moment I stepped through the doors, I felt welcomed. The teachers genuinely care. 
-                                             They don’t just teach ,they inspire. <br>Whether it's science, literature, or the arts, they make sure every lesson connects with us, challenges us, and helps us think in new ways.</p>
-                                        </div> <br>
-     
-                                        <div>
-                                            <h1>Nguweneza Kevin</h1>
-                                          <img src="Images/student2.jpg"> 
-                                          <p>One of the things I love most about my school is the balance between academics and personal growth.<br>
-                                              Yes, we study hard. But we also have amazing clubs, sports teams, art programs, and community service opportunities.<br>
-                                               Whether you’re into robotics, theater, basketball, or volunteering—we have a place for you. <br>
-                                               I found my voice through our debate team and learned to lead as class rep.<br>
-                                              And I’ve seen so many of my friends discover talents they never even knew they had.</p>
-                                        </div> <br>
-     
-                                        <div>
-                                            <h1>Mugisha Prince</h1>
-                                         <img src="Images/student3.jpg">
-                                         
-                                         <p>But what really sets Gahurire apart is that it prepares us for life beyond school. <br>
-                                             We don’t just memorize facts,
-                                             We learn how to solve problems, think critically, and work together. <br>
-                                            And when I look ahead to college and my career, I know I’ll be ready—because of everything I’ve learned here.</p>
-                                        </div>
-
-                                        <div>
-                                            <h1>Umutoni Hidaya</h1>
-                                            <img src="Images/student4.jpg">
-                                            
-                                            <p>So if you're looking for a school that challenges you, supports you, and helps you shine—Hillcrest Academy is the <br>
-                                                 I invite you to come visit us, meet our amazing teachers and students, <br>
-                                                   and see for yourself what makes our school special.
-                                                     Thank you—and I hope to see you in the halls of Hillcrest soon!
-                                                
-                                                </p>
-                                           </div>
-
-                                     </div>
-                                </center>
-                           
-            
-            
-                                              </div>
-          
+            <section class="announcements">
+                <h2>Announcements</h2>
+                <article>
+                    <h3>Outstanding Exam Performance</h3>
+                    <p>We are proud to announce that Gahurire TSS students achieved a 100% pass rate in the recent national examinations. This reflects our dedication to academic excellence and consistent hard work by both students and staff.</p>
+                </article>
+    
+                <article>
+                    <h3>Wisely Guided Teaching</h3>
+                    <p>At Gahurire TSS, our experienced teachers use intelligent and student-centered approaches to deliver lessons. They ensure every learner gets the support they need to succeed and think critically.</p>
+                </article>
+    
+                <article>
+                    <h3>Now Hiring: School Market</h3>
+                    <p>Gahurire TSS is opening a new school market and currently accepting applications for food and firewood suppliers. This is a great opportunity for local vendors to work with our institution. <a href="contact.html">Contact us</a> for more information.</p>
+                </article>
+    
+                <article>
+                    <h3>Enroll Your Child Today</h3>
+                    <p>We warmly invite parents to bring their children to join the Gahurire TSS family. With our proven track record, your child’s future is secure with us. Registration is ongoing!</p>
+                </article>
+            </section>
+    
+    
+            <!-- Testimonials Section -->
+            <section class="testimonials">
+                <h2>What Our Students and Teachers Say</h2>
+    
+                <div class="testimonial-card">
+                    <img src="Images/student1.jpg" alt="Barindikije Aphrodis">
+                    <h3>Barindikije Aphrodis</h3>
+                    <p>
+                        My name is Aphrodis, and I'm a proud student of Gahurire TSS. My school isn’t just a place where we learn subjects—
+                        it's a place where we grow, discover who we are, and build a future we’re excited about.
+                    </p>
+                </div>
+    
+                <div class="testimonial-card">
+                    <img src="Images/student2.jpg" alt="Nguweneza Kevin">
+                    <h3>Nguweneza Kevin</h3>
+                    <p>
+                        Yes, we study hard. But we also have amazing clubs, sports teams, art programs, and community service opportunities.
+                        Whether you’re into robotics, theater, or volunteering—we have a place for you.
+                    </p>
+                </div>
+    
+                <div class="testimonial-card">
+                    <img src="Images/student3.jpg" alt="Mugisha Prince">
+                    <h3>Mugisha Prince</h3>
+                    <p>
+                        What sets Gahurire apart is that it prepares us for life beyond school. We don’t just memorize facts—we apply them.
+                    </p>
+                </div>
+    
+                <div class="testimonial-card">
+                    <img src="Images/student4.jpg" alt="Umutoni Hidaya">
+                    <h3>Umutoni Hidaya</h3>
+                    <p>
+                        If you're looking for a school that challenges you, supports you, and helps you shine—Gahurire TSS is the place.
+                    </p>
+                </div>
+            </section>
+    
+            <!-- Footer -->
+            <footer class="footer">
+                <h3>Contact Us</h3>
+                <p><u>Email:</u> info@gahurire.ac</p>
+                <p><span>Tel:</span> +250 794270356</p>
+    
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="Images/instagram.jfif" alt="Instagram"></a>
+                    <a href="#"><img src="Images/facebo.png" alt="Facebook"></a>
+                    <a href="#"><img src="Images/youtu.PNG" alt="YouTube"></a>
+                    <a href="#"><img src="Images/watsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="Images/x.png" alt="X"></a>
+                </div>
+    
+                <p>&copy; 2025 Gahurire TSS</p>
+    
+                <div class="help-link">
+                    <h4>Have an issue?</h4>
+                    <a href="contact.html"><img src="Images/que.png" alt="Contact"></a>
+                </div>
+            </footer>
+        </div>
        
     </body>
 </html>
