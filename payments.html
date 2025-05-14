@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Payment - GS Gahurire TSS</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    header {
+  position:fixed;
+  background-color:#101820;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  top: 0;
+  left: 0px;
+  margin-left: 0px;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #28a745;
+}
+    .payment-container {
+      width: 40%;
+      margin: 80px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: black;
+    }
+
+    .payment-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 14px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #002f5f;
+    }
+.footer1 {
+  background-color: #003366;
+ color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top:0px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GS Gahurire TSS</div>
+  </header>
+
+  <div class="payment-container">
+    <h2>Student School Fees Payment</h2>
+    <form id="paymentForm">
+      <div class="form-group">
+        <label for="studentName">Student Full Name</label>
+        <input type="text" id="studentName" required>
+      </div>
+      <div class="form-group">
+        <label for="studentID">Student ID Number</label>
+        <input type="text" id="studentID" required>
+      </div>
+      <div class="form-group">
+        <label for="level">Level/Class</label>
+        <select id="level" required>
+          <option value="">Select Level</option>
+           <option>Nursery-Baby</option>
+          <option>Nursery-Mid</option>
+          <option>Nursery-Top</option>
+           <option>P1</option>
+          <option>P2</option>
+          <option>P3</option>
+          <option>P4</option>
+          <option>P5</option>
+          <option>P6</option
+          <option>S1</option>
+           <option>S1</option>
+          <option>S2</option>
+          <option>S3</option>
+          <option>L3</option>
+          <option>L4</option>
+          <option>L5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="trade">Trade /Department</label>
+        <select id="trade">
+          <option value="">Select Trade</option>
+           <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>Software Development</option>
+          <option>Building and Construction</option>
+          <option>Land Survey</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount to Pay (RWF)</label>
+        <input type="number" id="amount" required>
+      </div>
+      <div class="form-group">
+        <label for="method">Payment Method</label>
+        <select id="method" required>
+          <option value="">Choose Method</option>
+          <option>Mobile Money</option>
+          <option>Bank Transfer</option>
+          <option>Cash</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Pay Now</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer1">
+    <p>&copy; 2025 GS Gahurire TSS. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("paymentForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your payment has been recorded successfully.");
+      form.reset();
+    });
+  </script>
+</body>
+</html>
