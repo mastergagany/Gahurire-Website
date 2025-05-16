@@ -14,7 +14,7 @@ body {
     padding: 10px;
 }
 
-/* Header and Mobile */
+/* Header and Mobile .........*/
 .header, .mobile {
     display: flex;
     justify-content: space-between;
